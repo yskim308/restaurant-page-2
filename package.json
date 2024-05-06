@@ -1,0 +1,26 @@
+{
+  "name": "restaurant-page-2",
+  "version": "1.0.0",
+  "description": "Redoing restaurant page. This time utilizing tailwindcss and building componenets from scratch using its utility classes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yskim308/restaurant-page-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yskim308/restaurant-page-2/issues"
+  },
+  "homepage": "https://github.com/yskim308/restaurant-page-2#readme",
+  "devDependencies": {
+    "css-loader": "^7.1.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
