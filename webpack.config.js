@@ -12,6 +12,7 @@ module.exports = {
             template: './src/template.html'
         })
     ],
+    devtool: 'inline-source-map',
     module: {
         rules:[
             {
