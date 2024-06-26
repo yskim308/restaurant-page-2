@@ -55,30 +55,32 @@ function createMenu(){
     const contentDiv = document.querySelector("#content");
     killChildren(contentDiv);
     
-    const menuContainer = document.createElement('div'); 
-    menuContainer.classList.add('rounded-3xl', 'grid', 'sm:grid-cols-3', 'grid-cols-1', 'w-3/5', 'h-auto', 'bg-slate-200'); 
     
-    //image container div in menu item 
-    const imageContainer = document.createElement('div'); 
-    imageContainer.classList.add('flex', 'justify-center', 'justify-items-center');
-    const foodImage = document.createElement('img'); 
-    foodImage.src = burgerImage; 
-    foodImage.classList.add('max-h-56','object-cover', 'p-5', 'rounded-full');
-    imageContainer.appendChild(foodImage);
-    //text container div in menu container 
-    const textContainer = document.createElement('div'); 
-    textContainer.classList.add('flex', 'flex-col', 'col-span-2');
-    const textHeader = document.createElement('div'); 
-    textHeader.innerText = "Menu Item";
-    textHeader.classList.add('text-lg', 'font-extrabold', 'py-2');
-    const menuDescription = document.createElement('div'); 
-    menuDescription.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
-    textContainer.appendChild(textHeader);
-    textContainer.appendChild(menuDescription);
+    for (let i = 0; i < 4; i++){
+        const menuContainer = document.createElement('div'); 
+        menuContainer.classList.add('rounded-3xl', 'grid', 'sm:grid-cols-3', 'grid-cols-1', 'w-3/5', 'h-auto', 'bg-slate-200', 'my-8', 'p-3'); 
+        //image container div in menu item 
+        const imageContainer = document.createElement('div'); 
+        imageContainer.classList.add('flex', 'justify-center', 'justify-items-center');
+        const foodImage = document.createElement('img'); 
+        foodImage.src = burgerImage; 
+        foodImage.classList.add('max-h-56','object-cover', 'p-5', 'rounded-full');
+        imageContainer.appendChild(foodImage);
+        //text container div in menu container 
+        const textContainer = document.createElement('div'); 
+        textContainer.classList.add('flex', 'flex-col', 'col-span-2');
+        const textHeader = document.createElement('div'); 
+        textHeader.innerText = "Menu Item";
+        textHeader.classList.add('text-lg', 'font-extrabold', 'py-2');
+        const menuDescription = document.createElement('div'); 
+        menuDescription.innerText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+        textContainer.appendChild(textHeader);
+        textContainer.appendChild(menuDescription);
 
-    menuContainer.appendChild(imageContainer); 
-    menuContainer.appendChild(textContainer);
-    contentDiv.appendChild(menuContainer);
+        menuContainer.appendChild(imageContainer); 
+        menuContainer.appendChild(textContainer);
+        contentDiv.appendChild(menuContainer);
+    }
 }
 
 export {createAbout, createMenu, createHome};
