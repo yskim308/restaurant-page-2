@@ -1,8 +1,8 @@
 import restaurantImage from '../images/restaurant.jpg';
 import burgerImage from '../images/burger.jpg';
 import mapmarker from '../images/mapMarker.svg';
-import mail from '../images/mail.svg';
-import phone from '../images/phone.svg'; 
+import mailIcon from '../images/mail.svg';
+import phoneIcon from '../images/phone.svg'; 
 
 function killChildren(node){
     while (node.firstChild){
@@ -22,7 +22,34 @@ function createAbout(){
 
     const line = document.createElement('div'); 
     line.classList.add('flex'); 
+    const phone = document.createElement('img');
+    phone.src = phoneIcon;
+    line.appendChild(phone)
+    const lineText = document.createElement('lineText'); 
+    lineText.innerText = "01033932920";
+    line.appendChild(lineText);
+    container.appendChild(line);
 
+    const line2 = document.createElement('div'); 
+    line2.classList.add('flex');
+    const mail = document.createElement('img');
+    mail.src = mailIcon; 
+    line2.appendChild(mail); 
+    const line2Text = document.createElement('linetext'); 
+    line2Text.innerText = "loremipsum@gmail.com";
+    line2.appendChild(line2Text); 
+    container.appendChild(line2); 
+
+    const line3 = document.createElement('div'); 
+    line3.classList.add('flex'); 
+    const map = document.createElement('img'); 
+    map.src = mapmarker; 
+    line3.appendChild(map); 
+    const line3text = document.createElement('linetext'); 
+    line3text.innerText = "34 Street, 39-20"; 
+    line3.appendChild(line3text); 
+    container.appendChild(line3); 
+    
     contentDiv.appendChild(container);
 }
 
