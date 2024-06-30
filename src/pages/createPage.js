@@ -1,5 +1,8 @@
 import restaurantImage from '../images/restaurant.jpg';
 import burgerImage from '../images/burger.jpg';
+import mapmarker from '../images/mapMarker.svg';
+import mail from '../images/mail.svg';
+import phone from '../images/phone.svg'; 
 
 function killChildren(node){
     while (node.firstChild){
@@ -10,10 +13,17 @@ function killChildren(node){
 function createAbout(){
     const contentDiv = document.querySelector("#content"); 
     killChildren(contentDiv);
-    const tempDiv = document.createElement('div');
-    tempDiv.innerText = 'creating the about page'; 
 
-    contentDiv.appendChild(tempDiv);
+    const container = document.createElement('card'); 
+
+    const header = document.createElement('header'); 
+    header.innerText = "contact us!"; 
+    container.appendChild(header); 
+
+    const line = document.createElement('div'); 
+    line.classList.add('flex'); 
+
+    contentDiv.appendChild(container);
 }
 
 function createHome(){
