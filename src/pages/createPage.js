@@ -17,36 +17,41 @@ function createAbout(){
     const container = document.createElement('card'); 
 
     const header = document.createElement('header'); 
-    header.innerText = "contact us!"; 
     container.appendChild(header); 
 
     const line = document.createElement('div'); 
-    line.classList.add('flex'); 
+    line.classList.add('flex', 'items-center', 'p-5');
     const phone = document.createElement('img');
     phone.src = phoneIcon;
+    phone.classList.add('h-8');
     line.appendChild(phone)
     const lineText = document.createElement('lineText'); 
     lineText.innerText = "01033932920";
+    lineText.classList.add('text-4xl', 'p-5');
     line.appendChild(lineText);
     container.appendChild(line);
 
     const line2 = document.createElement('div'); 
-    line2.classList.add('flex');
+    line2.classList.add('flex', 'items-center', 'p-5');
     const mail = document.createElement('img');
     mail.src = mailIcon; 
+    mail.classList.add('h-8');
     line2.appendChild(mail); 
     const line2Text = document.createElement('linetext'); 
     line2Text.innerText = "loremipsum@gmail.com";
+    line2Text.classList.add('text-4xl', 'p-5');
     line2.appendChild(line2Text); 
     container.appendChild(line2); 
 
     const line3 = document.createElement('div'); 
-    line3.classList.add('flex'); 
+    line3.classList.add('flex', 'items-center', 'p-5'); 
     const map = document.createElement('img'); 
     map.src = mapmarker; 
+    map.classList.add('h-8');
     line3.appendChild(map); 
     const line3text = document.createElement('linetext'); 
     line3text.innerText = "34 Street, 39-20"; 
+    line3text.classList.add('text-4xl', 'p-5');
     line3.appendChild(line3text); 
     container.appendChild(line3); 
     
